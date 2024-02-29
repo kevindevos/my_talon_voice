@@ -11,4 +11,9 @@ opdracht modus:
     mode.disable("user.dutch")
     mode.enable("command")
 
+opdrachten modus:
+    mode.disable("dictation")
+    mode.disable("user.dutch")
+    mode.enable("command")
+
 <phrase>: insert("{phrase} ")
