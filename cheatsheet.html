@@ -1,0 +1,828 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My personal cheatsheet for talon and cursorless commands</title>
+        <style>
+            .body {
+                display: flex;
+                flex-wrap: wrap;
+                font-family: Arial, Helvetica, sans-serif;
+                box-sizing: border-box;
+                background-color: #f3f3f3;
+            }
+
+            .title {
+                color: #5D87D9;
+                margin-top: 0px;
+            }
+
+            .section {
+                display: flex;
+                flex-direction: column;
+                border: 1px solid grey;
+                border-radius: 5px;
+                padding: 20px;
+                margin: 20px;
+                flex: 1;
+                background-color: #ffffff;
+            }
+
+            .section__header {
+                border-bottom: 1px solid grey;
+                margin-bottom: 15px;
+            }
+
+            .table {
+                width: 100%;
+            }
+
+            table th {
+                text-align: left;
+                color: grey;
+            }
+
+            .table tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            .table td {
+                padding: 4px 6px;
+            }
+
+            th.command,
+            td.command {
+                padding-right: 15px;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+
+            .result {
+                width: 100%;
+                max-width: 400px;
+            }
+        </style>
+    </head>
+
+    <body class="body">
+        <div class="section">
+            <div class="section__header">
+                <h2 class="title"> snippets</h2>
+            </div>
+            <div class="section__body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="command">Command</th>
+                            <th class="result">Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="command">snip {user.snippets}</td>
+                            <td class="result">user.snippet_insert(user.snippets)</td>
+                        </tr>
+                        <tr>
+                            <td class="command">snip hunt <user.text></user.text>
+                            </td>
+                            <td class="result">user.snippet_search(user.text)</td>
+                        </tr>
+                        <tr>
+                            <td class="command">snip hunt</td>
+                            <td class="result">user.snippet_search("")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">snip create</td>
+                            <td class="result">user.snippet_create()</td>
+                        </tr>
+                        <tr>
+                            <td class="command">snip show</td>
+                            <td class="result">user.snippet_toggle()</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section__header">
+                <h2 class="title"> Misc</h2>
+            </div>
+            <div class="section__body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="command">Command</th>
+                            <th class="result">Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="command">previous</td>
+                            <td class="result"> switches to the previous open application </td>
+                        </tr>
+                        <tr>
+                            <td class="command">right space</td>
+                            <td class="result"> move a space right on mac </td>
+                        </tr>
+                        <tr>
+                            <td class="command">left space</td>
+                            <td class="result"> move a space left on mac </td>
+                        </tr>
+                        <tr>
+                            <td class="command">redo that</td>
+                            <td class="result"> the opposite of "nope" </td>
+                        </tr>
+                        <tr>
+                            <td class="command">tail semicolon</td>
+                            <td class="result">add ; to the end of the line</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section__header">
+                <h2 class="title"> javascript</h2>
+            </div>
+            <div class="section__body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="command">Command</th>
+                            <th class="result">Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="command">(op | is) strict equal</td>
+                            <td class="result">" === "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">(op | is) strict not equal</td>
+                            <td class="result">" !== "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">state const</td>
+                            <td class="result">"const "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">state let</td>
+                            <td class="result">"let "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">state var</td>
+                            <td class="result">"var "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">state async</td>
+                            <td class="result">"async "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">state await</td>
+                            <td class="result">"await "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">dot map</td>
+                            <td class="result">insert(".map()")
+                                key(left)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="command">dot filter</td>
+                            <td class="result">insert(".filter()")
+                                key(left)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="command">dot reduce</td>
+                            <td class="result">insert(".reduce()")
+                                key(left)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="command">dot [common_function_name]</td>
+                            <td class="result">insert(".commonFunctionName()") // only works with the language functions")
+                                key(left)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="command">state spread</td>
+                            <td class="result">"..."</td>
+                        </tr>
+                        <tr>
+                            <td class="command">funky <user.text></user.text>
+                            </td>
+                            <td class="result">user.code_default_function(text)</td>
+                        </tr>
+                        <tr>
+                            <td class="command">pro funky <user.text></user.text>
+                            </td>
+                            <td class="result">user.code_protected_function(text)</td>
+                        </tr>
+                        <tr>
+                            <td class="command">pub funky <user.text></user.text>
+                            </td>
+                            <td class="result">user.code_public_function(text)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section__header">
+                <h2 class="title"> vscode</h2>
+            </div>
+            <div class="section__body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="command">Command</th>
+                            <th class="result">Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="command">window reload</td>
+                            <td class="result">user.vscode("workbench.action.reloadWindow")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">window close</td>
+                            <td class="result">user.vscode("workbench.action.closeWindow")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">please [<user.text>]</user.text>
+                            </td>
+                            <td class="result">user.vscode("workbench.action.showCommands")
+                                insert(user.text or "")
+
+                                # Sidebar</td>
+                        </tr>
+                        <tr>
+                            <td class="command">bar explore</td>
+                            <td class="result">user.vscode("workbench.view.explorer")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">bar extensions</td>
+                            <td class="result">user.vscode("workbench.view.extensions")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">bar outline</td>
+                            <td class="result">user.vscode("outline.focus")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">bar run</td>
+                            <td class="result">user.vscode("workbench.view.debug")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">bar search</td>
+                            <td class="result">user.vscode("workbench.view.search")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">bar source</td>
+                            <td class="result">user.vscode("workbench.view.scm")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">bar switch</td>
+                            <td class="result">user.vscode("workbench.action.toggleSidebarVisibility")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">symbol hunt [<user.text>]</user.text>
+                            </td>
+                            <td class="result">user.vscode("workbench.action.gotoSymbol")
+                                sleep(50ms)
+                                insert(text or "")
+
+                                # Panels</td>
+                        </tr>
+                        <tr>
+                            <td class="command">panel control</td>
+                            <td class="result">user.vscode("workbench.panel.repl.view.focus")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">panel output</td>
+                            <td class="result">user.vscode("workbench.panel.output.focus")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">panel problems</td>
+                            <td class="result">user.vscode("workbench.panel.markers.view.focus")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">panel switch</td>
+                            <td class="result">user.vscode("workbench.action.togglePanel")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">panel terminal</td>
+                            <td class="result">user.vscode("workbench.action.terminal.focus")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">focus editor</td>
+                            <td class="result">user.vscode("workbench.action.focusActiveEditorGroup")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">show settings</td>
+                            <td class="result">user.vscode("workbench.action.openGlobalSettings")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">show shortcuts</td>
+                            <td class="result">user.vscode("workbench.action.openGlobalKeybindings")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">show snippets</td>
+                            <td class="result">user.vscode("workbench.action.openSnippets")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">centered switch</td>
+                            <td class="result">user.vscode("workbench.action.toggleCenteredLayout")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">fullscreen switch</td>
+                            <td class="result">user.vscode("workbench.action.toggleFullScreen")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">theme switch</td>
+                            <td class="result">user.vscode("workbench.action.selectTheme")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">wrap switch</td>
+                            <td class="result">user.vscode("editor.action.toggleWordWrap")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">zen switch</td>
+                            <td class="result">user.vscode("workbench.action.toggleZenMode")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">file hunt [<user.text>]</user.text>
+                            </td>
+                            <td class="result">user.vscode("workbench.action.quickOpen")
+                                sleep(50ms)
+                                insert(text or "")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">file copy path</td>
+                            <td class="result">user.vscode("copyFilePath")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">file create sibling</td>
+                            <td class="result">user.vscode_and_wait("explorer.newFile")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">file create</td>
+                            <td class="result">user.vscode("workbench.action.files.newUntitledFile")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">file rename</td>
+                            <td class="result">user.vscode("fileutils.renameFile")
+                                sleep(150ms)</td>
+                        </tr>
+                        <tr>
+                            <td class="command">file move</td>
+                            <td class="result">user.vscode("fileutils.moveFile")
+                                sleep(150ms)</td>
+                        </tr>
+                        <tr>
+                            <td class="command">file open folder</td>
+                            <td class="result">user.vscode("revealFileInOS")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">file reveal</td>
+                            <td class="result">user.vscode("workbench.files.action.showActiveFileInExplorer")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">save ugly</td>
+                            <td class="result">user.vscode("workbench.action.files.saveWithoutFormatting")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">suggest show</td>
+                            <td class="result">user.vscode("editor.action.triggerSuggest")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">hint show</td>
+                            <td class="result">user.vscode("editor.action.triggerParameterHints")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">definition show</td>
+                            <td class="result">user.vscode("editor.action.revealDefinition")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">definition peek</td>
+                            <td class="result">user.vscode("editor.action.peekDefinition")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">definition side</td>
+                            <td class="result">user.vscode("editor.action.revealDefinitionAside")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">references show</td>
+                            <td class="result">user.vscode("editor.action.goToReferences")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">references find</td>
+                            <td class="result">user.vscode("references-view.find")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">format that</td>
+                            <td class="result">user.vscode("editor.action.formatDocument")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">format selection</td>
+                            <td class="result">user.vscode("editor.action.formatSelection")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">imports fix</td>
+                            <td class="result">user.vscode("editor.action.organizeImports")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">problem next</td>
+                            <td class="result">user.vscode("editor.action.marker.nextInFiles")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">problem last</td>
+                            <td class="result">user.vscode("editor.action.marker.prevInFiles")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">problem fix</td>
+                            <td class="result">user.vscode("problems.action.showQuickFixes")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">rename that</td>
+                            <td class="result">user.vscode("editor.action.rename")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">refactor that</td>
+                            <td class="result">user.vscode("editor.action.refactor")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">whitespace trim</td>
+                            <td class="result">user.vscode("editor.action.trimTrailingWhitespace")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">language switch</td>
+                            <td class="result">user.vscode("workbench.action.editor.changeLanguageMode")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">refactor rename</td>
+                            <td class="result">user.vscode("editor.action.rename")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">refactor this</td>
+                            <td class="result">user.vscode("editor.action.refactor")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">(go declaration | follow)</td>
+                            <td class="result">user.vscode("editor.action.revealDefinition")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">go back</td>
+                            <td class="result">user.vscode("workbench.action.navigateBack")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">go forward</td>
+                            <td class="result">user.vscode("workbench.action.navigateForward")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">go implementation</td>
+                            <td class="result">user.vscode("editor.action.goToImplementation")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">go type</td>
+                            <td class="result">user.vscode("editor.action.goToTypeDefinition")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">go usage</td>
+                            <td class="result">user.vscode("references-view.find")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">go recent [<user.text>]</user.text>
+                            </td>
+                            <td class="result">user.vscode("workbench.action.openRecent")
+                                sleep(50ms)
+                                insert(text or "")
+                                sleep(250ms)
+
+                                # Bookmarks. Requires Bookmarks plugin</td>
+                        </tr>
+                        <tr>
+                            <td class="command">go marks</td>
+                            <td class="result">user.vscode("workbench.view.extension.bookmarks")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">toggle mark</td>
+                            <td class="result">user.vscode("bookmarks.toggle")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">go next mark</td>
+                            <td class="result">user.vscode("bookmarks.jumpToNext")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">go last mark</td>
+                            <td class="result">user.vscode("bookmarks.jumpToPrevious")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">fold that</td>
+                            <td class="result">user.vscode("editor.fold")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">unfold that</td>
+                            <td class="result">user.vscode("editor.unfold")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">fold those</td>
+                            <td class="result">user.vscode("editor.foldAllMarkerRegions")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">unfold those</td>
+                            <td class="result">user.vscode("editor.unfoldRecursively")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">fold all</td>
+                            <td class="result">user.vscode("editor.foldAll")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">unfold all</td>
+                            <td class="result">user.vscode("editor.unfoldAll")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">fold comments</td>
+                            <td class="result">user.vscode("editor.foldAllBlockComments")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git branch</td>
+                            <td class="result">user.vscode("git.branchFrom")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git branch this</td>
+                            <td class="result">user.vscode("git.branch")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git checkout [<user.text>]</user.text>
+                            </td>
+                            <td class="result">user.vscode("git.checkout")
+                                sleep(50ms)
+                                insert(text or "")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git commit [<user.text>]</user.text>
+                            </td>
+                            <td class="result">user.vscode("git.commitStaged")
+                                sleep(100ms)
+                                user.insert_formatted(text or "", "CAPITALIZE_FIRST_WORD")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git commit undo</td>
+                            <td class="result">user.vscode("git.undoCommit")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git commit ammend</td>
+                            <td class="result">user.vscode("git.commitStagedAmend")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git diff</td>
+                            <td class="result">user.vscode("git.openChange")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git ignore</td>
+                            <td class="result">user.vscode("git.ignore")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git merge</td>
+                            <td class="result">user.vscode("git.merge")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git output</td>
+                            <td class="result">user.vscode("git.showOutput")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git pull</td>
+                            <td class="result">user.vscode("git.pullRebase")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git push</td>
+                            <td class="result">user.vscode("git.push")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git push focus</td>
+                            <td class="result">user.vscode("git.pushForce")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git rebase abort</td>
+                            <td class="result">user.vscode("git.rebaseAbort")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git reveal</td>
+                            <td class="result">user.vscode("git.revealInExplorer")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git revert</td>
+                            <td class="result">user.vscode("git.revertChange")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git stash</td>
+                            <td class="result">user.vscode("git.stash")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git stash pop</td>
+                            <td class="result">user.vscode("git.stashPop")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git status</td>
+                            <td class="result">user.vscode("workbench.scm.focus")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git stage</td>
+                            <td class="result">user.vscode("git.stage")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git stage all</td>
+                            <td class="result">user.vscode("git.stageAll")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git unstage</td>
+                            <td class="result">user.vscode("git.unstage")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git unstage all</td>
+                            <td class="result">user.vscode("git.unstageAll")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">pull request</td>
+                            <td class="result">user.vscode("pr.create")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">change next</td>
+                            <td class="result">key(alt-f5)</td>
+                        </tr>
+                        <tr>
+                            <td class="command">change last</td>
+                            <td class="result">key(shift-alt-f5)</td>
+                        </tr>
+                        <tr>
+                            <td class="command">break point</td>
+                            <td class="result">user.vscode("editor.debug.action.toggleBreakpoint")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">step over</td>
+                            <td class="result">user.vscode("workbench.action.debug.stepOver")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">debug step into</td>
+                            <td class="result">user.vscode("workbench.action.debug.stepInto")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">debug step out [of]</td>
+                            <td class="result">user.vscode("workbench.action.debug.stepOut")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">debug start</td>
+                            <td class="result">user.vscode("workbench.action.debug.start")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">debug pause</td>
+                            <td class="result">user.vscode("workbench.action.debug.pause")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">debug stopper</td>
+                            <td class="result">user.vscode("workbench.action.debug.stop")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">debug continue</td>
+                            <td class="result">user.vscode("workbench.action.debug.continue")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">debug restart</td>
+                            <td class="result">user.vscode("workbench.action.debug.restart")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">debug console</td>
+                            <td class="result">user.vscode("workbench.debug.action.toggleRepl")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">terminal external</td>
+                            <td class="result">user.vscode("workbench.action.terminal.openNativeConsole")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">terminal new</td>
+                            <td class="result">user.vscode("workbench.action.terminal.new")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">terminal next</td>
+                            <td class="result">user.vscode("workbench.action.terminal.focusNext")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">terminal last</td>
+                            <td class="result">user.vscode("workbench.action.terminal.focusPrevious")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">terminal split</td>
+                            <td class="result">user.vscode("workbench.action.terminal.split")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">terminal zoom</td>
+                            <td class="result">user.vscode("workbench.action.toggleMaximizedPanel")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">terminal trash</td>
+                            <td class="result">user.vscode("workbench.action.terminal.kill")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">terminal toggle</td>
+                            <td class="result">user.vscode_and_wait("workbench.action.terminal.toggleTerminal")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">terminal scroll up</td>
+                            <td class="result">user.vscode("workbench.action.terminal.scrollUp")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">terminal scroll down</td>
+                            <td class="result">user.vscode("workbench.action.terminal.scrollDown")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">terminal <number_small></number_small>
+                            </td>
+                            <td class="result">user.vscode_terminal(number_small)</td>
+                        </tr>
+                        <tr>
+                            <td class="command">copy line down</td>
+                            <td class="result">user.vscode("editor.action.copyLinesDownAction")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">copy line up</td>
+                            <td class="result">user.vscode("editor.action.copyLinesUpAction")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">select less</td>
+                            <td class="result">user.vscode("editor.action.smartSelect.shrink")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">select (more|this)</td>
+                            <td class="result">user.vscode("editor.action.smartSelect.expand")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">minimap</td>
+                            <td class="result">user.vscode("editor.action.toggleMinimap")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">maximize</td>
+                            <td class="result">user.vscode("workbench.action.minimizeOtherEditors")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">restore</td>
+                            <td class="result">user.vscode("workbench.action.evenEditorWidths")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">replace here</td>
+                            <td class="result">user.replace("")
+                                key(cmd-alt-l)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="command">hover show</td>
+                            <td class="result">user.vscode("editor.action.showHover")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">join lines</td>
+                            <td class="result">user.vscode("editor.action.joinLines")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">full screen</td>
+                            <td class="result">user.vscode("workbench.action.toggleFullScreen")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">curse undo</td>
+                            <td class="result">user.vscode("cursorUndo")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">select word</td>
+                            <td class="result">user.vscode("editor.action.addSelectionToNextFindMatch")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">skip word</td>
+                            <td class="result">user.vscode("editor.action.moveSelectionToNextFindMatch")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">cell next</td>
+                            <td class="result">user.vscode("jupyter.gotoNextCellInFile")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">cell last</td>
+                            <td class="result">user.vscode("jupyter.gotoPrevCellInFile")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">cell run above</td>
+                            <td class="result">user.vscode("jupyter.runallcellsabove.palette")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">cell run</td>
+                            <td class="result">user.vscode("jupyter.runcurrentcell")</td>
+                        </tr>
+                        <tr>
+                            <td class="command">install local</td>
+                            <td class="result">user.vscode("workbench.extensions.action.installVSIX")</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
