@@ -144,6 +144,345 @@
         </div>
         <div class="section">
             <div class="section__header">
+                <h2 class="title"> git</h2>
+            </div>
+            <div class="section__body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="command">Command</th>
+                            <th class="result">Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="command">git add patch</td>
+                            <td class="result">"git add . -p\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git add</td>
+                            <td class="result">"git add "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git add everything</td>
+                            <td class="result">"git add -u\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git bisect</td>
+                            <td class="result">"git bisect "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git blame</td>
+                            <td class="result">"git blame "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git branch</td>
+                            <td class="result">"git branch "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git remote branches</td>
+                            <td class="result">"git branch --remote\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git branch <user.text></user.text>
+                            </td>
+                            <td class="result">"git branch {text}"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git checkout</td>
+                            <td class="result">"git checkout "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git checkout master</td>
+                            <td class="result">"git checkout master\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git checkout main</td>
+                            <td class="result">"git checkout main\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git checkout <user.text></user.text>
+                            </td>
+                            <td class="result">"git checkout {text}"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git cherry pick</td>
+                            <td class="result">"git cherry-pick "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git cherry pick continue</td>
+                            <td class="result">"git cherry-pick --continue "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git cherry pick abort</td>
+                            <td class="result">"git cherry-pick --abort "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git cherry pick skip</td>
+                            <td class="result">"git cherry-pick --skip "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git clone</td>
+                            <td class="result">"git clone "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git clean everything</td>
+                            <td class="result">"git clean -dfx"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git commit message <user.text></user.text>
+                            </td>
+                            <td class="result">"git commit -m '{text}'"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git commit</td>
+                            <td class="result">"git commit\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git diff (colour|color) words</td>
+                            <td class="result">"git diff --color-words "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git diff</td>
+                            <td class="result">"git diff "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git diff cached</td>
+                            <td class="result">"git diff --cached\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git fetch</td>
+                            <td class="result">"git fetch\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git fetch all</td>
+                            <td class="result">"git fetch --all\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git fetch <user.text></user.text>
+                            </td>
+                            <td class="result">"git fetch {text}"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git fetch prune</td>
+                            <td class="result">"git fetch --prune\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git in it</td>
+                            <td class="result">"git init\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git log all</td>
+                            <td class="result">"git log\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git log all changes</td>
+                            <td class="result">"git log -c\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git log</td>
+                            <td class="result">"git log "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git log changes</td>
+                            <td class="result">"git log -c "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git merge</td>
+                            <td class="result">"git merge "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git merge <user.text></user.text>
+                            </td>
+                            <td class="result">"git merge {text}"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git move</td>
+                            <td class="result">"git mv "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git new branch</td>
+                            <td class="result">"git checkout -b "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git pull</td>
+                            <td class="result">"git pull\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git pull origin</td>
+                            <td class="result">"git pull origin "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git pull rebase</td>
+                            <td class="result">"git pull --rebase\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git pull fast forward</td>
+                            <td class="result">"git pull --ff-only\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git pull <user.text></user.text>
+                            </td>
+                            <td class="result">"git pull {text} "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git push</td>
+                            <td class="result">"git push\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git push origin</td>
+                            <td class="result">"git push origin "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git push up stream origin</td>
+                            <td class="result">"git push -u origin"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git push <user.text></user.text>
+                            </td>
+                            <td class="result">"git push {text} "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git push tags</td>
+                            <td class="result">"git push --tags\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git rebase</td>
+                            <td class="result">"git rebase\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git rebase continue</td>
+                            <td class="result">"git rebase --continue"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git rebase skip</td>
+                            <td class="result">"git rebase --skip"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git remove</td>
+                            <td class="result">"git rm "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git (remove|delete) branch</td>
+                            <td class="result">"git branch -d "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git (remove|delete) remote branch</td>
+                            <td class="result">"git push --delete origin "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git reset</td>
+                            <td class="result">"git reset "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git reset soft</td>
+                            <td class="result">"git reset --soft "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git reset hard</td>
+                            <td class="result">"git reset --hard "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git restore</td>
+                            <td class="result">"git restore "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git restore staged</td>
+                            <td class="result">"git restore --staged "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git remote show origin</td>
+                            <td class="result">"git remote show origin\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git remote add upstream</td>
+                            <td class="result">"git remote add upstream "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git show</td>
+                            <td class="result">"git show "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git stash pop</td>
+                            <td class="result">"git stash pop\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git stash</td>
+                            <td class="result">"git stash\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git stash apply</td>
+                            <td class="result">"git stash apply\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git stash list</td>
+                            <td class="result">"git stash list\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git stash show</td>
+                            <td class="result">"git stash show"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git status</td>
+                            <td class="result">"git status\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git submodule add</td>
+                            <td class="result">"git submodule add "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git tag</td>
+                            <td class="result">"git tag "</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git edit config</td>
+                            <td class="result">"git config --local -e\n"</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git clone clipboard</td>
+                            <td class="result">insert("git clone ")
+                                edit.paste()
+                                key(enter)</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git diff highlighted</td>
+                            <td class="result">edit.copy()
+                                insert("git diff ")
+                                edit.paste()
+                                key(enter)</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git diff clipboard</td>
+                            <td class="result">insert("git diff ")
+                                edit.paste()
+                                key(enter)</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git add highlighted</td>
+                            <td class="result">edit.copy()
+                                insert("git add ")
+                                edit.paste()
+                                key(enter)</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git add clipboard</td>
+                            <td class="result">insert("git add ")
+                                edit.paste()
+                                key(enter)</td>
+                        </tr>
+                        <tr>
+                            <td class="command">git commit highlighted</td>
+                            <td class="result">edit.copy()
+                                insert("git add ")
+                                edit.paste()
+                                insert("\ngit commit\n")</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section__header">
                 <h2 class="title"> javascript</h2>
             </div>
             <div class="section__body">
@@ -203,7 +542,8 @@
                         </tr>
                         <tr>
                             <td class="command">dot [common_function_name]</td>
-                            <td class="result">insert(".commonFunctionName()") // only works with the language functions")
+                            <td class="result">insert(".commonFunctionName()") // only works with the language
+                                functions")
                                 key(left)
                             </td>
                         </tr>
@@ -825,4 +1165,5 @@
             </div>
         </div>
     </body>
+
 </html>
