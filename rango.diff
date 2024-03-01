@@ -1,0 +1,40 @@
+diff --git a/src/rango.talon b/src/rango.talon
+index 6e58158..3d6532c 100644
+--- a/src/rango.talon
++++ b/src/rango.talon
+@@ -77,6 +77,9 @@ show <user.rango_target>:
+ upper: user.rango_command_without_target("scrollUpPage")
+ upper <number>: user.rango_command_without_target("scrollUpPage", number)
+ upper all: user.rango_command_without_target("scrollUpPage", 9999)
++north: user.rango_command_without_target("scrollUpPage")
++north <number>: user.rango_command_without_target("scrollUpPage", number)
++north all: user.rango_command_without_target("scrollUpPage", 9999)
+ tiny up: user.rango_command_without_target("scrollUpPage", 0.2)
+ 
+ downer: user.rango_command_without_target("scrollDownPage")
+@@ -95,12 +98,16 @@ tiny right: user.rango_command_without_target("scrollRightPage", 0.2)
+ # Scroll the left or right asides
+ upper left: user.rango_command_without_target("scrollUpLeftAside")
+ upper left all: user.rango_command_without_target("scrollUpLeftAside", 9999)
++north left: user.rango_command_without_target("scrollUpLeftAside")
++north left all: user.rango_command_without_target("scrollUpLeftAside", 9999)
+ 
+ downer left: user.rango_command_without_target("scrollDownLeftAside")
+ downer left all: user.rango_command_without_target("scrollDownLeftAside", 9999)
+ 
+ upper right: user.rango_command_without_target("scrollUpRightAside")
+ upper right all: user.rango_command_without_target("scrollUpRightAside", 9999)
++north right: user.rango_command_without_target("scrollUpRightAside")
++north right all: user.rango_command_without_target("scrollUpRightAside", 9999)
+ 
+ downer right: user.rango_command_without_target("scrollDownRightAside")
+ downer right all: user.rango_command_without_target("scrollDownRightAside", 9999)
+@@ -108,6 +115,8 @@ downer right all: user.rango_command_without_target("scrollDownRightAside", 9999
+ # Scroll the scrolling container that contains the target
+ upper <user.rango_target>:
+   user.rango_command_with_target("scrollUpAtElement", rango_target)
++north <user.rango_target>:
++  user.rango_command_with_target("scrollUpAtElement", rango_target)
+ tiny up <user.rango_target>:
+   user.rango_command_with_target("scrollUpAtElement", rango_target, 0.2)
+ 

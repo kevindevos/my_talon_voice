@@ -1,0 +1,134 @@
+diff --git a/apps/vscode/vscode.talon b/apps/vscode/vscode.talon
+index 877f5fc..a50f67c 100644
+--- a/apps/vscode/vscode.talon
++++ b/apps/vscode/vscode.talon
+@@ -35,6 +35,12 @@ symbol hunt all [<user.text>]:
+     sleep(50ms)
+     insert(text or "")
+ 
++disk ugly: user.vscode("workbench.action.files.saveWithoutFormatting")
++disk:
++    edit.save()
++    sleep(150ms)
++    user.vscode("hideSuggestWidget")
++
+ # Panels
+ panel control: user.vscode("workbench.panel.repl.view.focus")
+ panel output: user.vscode("workbench.panel.output.focus")
+@@ -111,7 +117,7 @@ format selection: user.vscode("editor.action.formatSelection")
+ imports fix: user.vscode("editor.action.organizeImports")
+ problem next: user.vscode("editor.action.marker.nextInFiles")
+ problem last: user.vscode("editor.action.marker.prevInFiles")
+-problem fix: user.vscode("problems.action.showQuickFixes")
++problem fix: user.vscode("problems.action.showQuickFixes")^
+ rename that: user.vscode("editor.action.rename")
+ refactor that: user.vscode("editor.action.refactor")
+ whitespace trim: user.vscode("editor.action.trimTrailingWhitespace")
+diff --git a/core/edit/edit.talon b/core/edit/edit.talon
+index 052e915..aea10f3 100644
+--- a/core/edit/edit.talon
++++ b/core/edit/edit.talon
+@@ -31,6 +31,11 @@ go way right: edit.line_end()
+ go way up: edit.file_start()
+ go way down: edit.file_end()
+ 
++scratch <number_small> times: user.delete_left_n(number_small)
++drill <number_small> times: user.delete_right_n(number_small)
++
++disk: edit.save()
++
+ go top: edit.file_start()
+ go bottom: edit.file_end()
+ 
+@@ -171,7 +176,7 @@ clone line: edit.line_clone()
+ new line above: edit.line_insert_up()
+ new line below | slap: edit.line_insert_down()
+ 
+-# Insert padding with optional symbols
++# Insert padding with optional sy10mbols
+ (pad | padding): user.insert_between(" ", " ")
+ (pad | padding) <user.symbol_key>+:
+     insert(" ")
+@@ -179,7 +184,7 @@ new line below | slap: edit.line_insert_down()
+     insert(" ")
+ 
+ # Undo/redo
+-undo that: edit.undo()
++nope: edit.undo()
+ redo that: edit.redo()
+ 
+ # Save
+diff --git a/core/keys/keys.py b/core/keys/keys.py
+index 594fc6f..ea3bbfe 100644
+--- a/core/keys/keys.py
++++ b/core/keys/keys.py
+@@ -247,11 +247,10 @@ simple_keys = [
+ ]
+ 
+ alternate_keys = {
+-    "wipe": "backspace",
+-    "delete": "backspace",
+-    #'junk': 'backspace',
+-    "forward delete": "delete",
+-    "page up": "pageup",
++    "drill": "delete",
++    "scratch": "backspace",
++    "scrape": "escape",
++    "void": "space",
+     "page down": "pagedown",
+ }
+ # mac apparently doesn't have the menu key.
+diff --git a/core/noise.py b/core/noise.py
+index 80c61ea..8479e2b 100644
+--- a/core/noise.py
++++ b/core/noise.py
+@@ -29,7 +29,7 @@ def noise_trigger_hiss_debounce(active: bool):
+     """Since the hiss noise triggers while you're talking we need to debounce it"""
+     global hiss_cron
+     if active:
+-        hiss_cron = cron.after("100ms", lambda: actions.user.noise_trigger_hiss(active))
++        hiss_cron = cron.after("200ms", lambda: actions.user.noise_trigger_hiss(active))
+     else:
+         cron.cancel(hiss_cron)
+         actions.user.noise_trigger_hiss(active)
+diff --git a/core/windows_and_tabs/window_management.talon b/core/windows_and_tabs/window_management.talon
+index 393cebe..0d9e1c8 100644
+--- a/core/windows_and_tabs/window_management.talon
++++ b/core/windows_and_tabs/window_management.talon
+@@ -18,3 +18,11 @@ snap <user.running_applications> <user.window_snap_position>:
+     user.snap_app(running_applications, window_snap_position)
+ snap <user.running_applications> [screen] <number>:
+     user.move_app_to_screen(running_applications, number)
++weber [<phrase>]$:
++    user.switcher_focus("Chrome")
++    sleep(200ms)
++    user.parse_phrase(phrase or "")
++coder [<phrase>]$:
++    user.switcher_focus("Code")
++    sleep(300ms)
++    user.parse_phrase(phrase or "")
+\ No newline at end of file
+diff --git a/lang/javascript/javascript.talon b/lang/javascript/javascript.talon
+index c05b609..97537f9 100644
+--- a/lang/javascript/javascript.talon
++++ b/lang/javascript/javascript.talon
+@@ -53,4 +53,4 @@ state reduce: app.notify('ERROR: Command deprecated; please use "dot reduce"')
+ 
+ state spread: "..."
+ 
+-from import: user.insert_between(' from  "', '"')
++from import: user.insert_between(' from  "', '"')
+\ No newline at end of file
+diff --git a/settings.talon b/settings.talon
+index cca9b5f..7a75df3 100644
+--- a/settings.talon
++++ b/settings.talon
+@@ -24,7 +24,7 @@ settings():
+     user.mouse_enable_pop_click = 1
+ 
+     # Enable if you like to use the hissing noise to do mouse scroll
+-    user.mouse_enable_hiss_scroll = 0
++    user.mouse_enable_hiss_scroll = 1
+ 
+     # When enabled, the 'Scroll Mouse' GUI will not be shown.
+     user.mouse_hide_mouse_gui = 0

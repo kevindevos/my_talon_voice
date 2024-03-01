@@ -1,0 +1,31 @@
+diff --git a/engines.py b/engines.py
+index 8a729c3..08559c4 100644
+--- a/engines.py
++++ b/engines.py
+@@ -2,3 +2,4 @@ from talon import Context, speech_system
+ from talon.engines.webspeech import WebSpeechEngine
+ webspeech = WebSpeechEngine()
+ speech_system.add_engine(webspeech)
++
+diff --git a/languages.py b/languages.py
+index 055db98..85c404a 100644
+--- a/languages.py
++++ b/languages.py
+@@ -6,3 +6,4 @@ mod.mode("portuguese")
+ mod.mode("russian")
+ mod.mode("spanish")
+ mod.mode("swedish")
++mod.mode("dutch")
+diff --git a/languages.talon b/languages.talon
+index 0ab6aa4..f8cf522 100644
+--- a/languages.talon
++++ b/languages.talon
+@@ -27,3 +27,8 @@ swedish mode:
+     mode.disable("command")
+     mode.enable("dictation")
+     mode.enable("user.swedish")
++
++dutch mode:
++    mode.disable("command")
++    mode.enable("dictation")
++    mode.enable("user.dutch")
