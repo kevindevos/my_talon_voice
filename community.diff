@@ -1,5 +1,5 @@
 diff --git a/apps/vscode/vscode.talon b/apps/vscode/vscode.talon
-index 877f5fc..4f574d0 100644
+index 877f5fc..9928645 100644
 --- a/apps/vscode/vscode.talon
 +++ b/apps/vscode/vscode.talon
 @@ -35,6 +35,12 @@ symbol hunt all [<user.text>]:
@@ -15,6 +15,24 @@ index 877f5fc..4f574d0 100644
  # Panels
  panel control: user.vscode("workbench.panel.repl.view.focus")
  panel output: user.vscode("workbench.panel.output.focus")
+@@ -95,6 +101,17 @@ file delete:
+     sleep(150ms)
+ file open folder: user.vscode("revealFileInOS")
+ file reveal: user.vscode("workbench.files.action.showActiveFileInExplorer")
++
++recent [<phrase>]$:
++    user.vscode("workbench.action.showAllEditorsByMostRecentlyUsed")
++    sleep(300ms)
++    user.parse_phrase(phrase or "")
++
++buffers [<phrase>]$:
++    user.vscode("workbench.action.showAllEditorsByMostRecentlyUsed")
++    sleep(300ms)
++    user.parse_phrase(phrase or "")
++
+ save ugly: user.vscode("workbench.action.files.saveWithoutFormatting")
+ 
+ # Language Features
 diff --git a/core/edit/edit.talon b/core/edit/edit.talon
 index 052e915..aea10f3 100644
 --- a/core/edit/edit.talon
