@@ -11,3 +11,6 @@ git diff > "${MY_TALON}/webspeech_examples.diff"
 
 cd "${TALON_DIR}/rango-talon"
 git diff > "${MY_TALON}/rango.diff"
+
+# Copy parrot files
+cp "${TALON_DIR}/{parrot.py,parrot.talon}" "${MY_TALON}"

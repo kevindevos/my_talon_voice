@@ -10,15 +10,11 @@ parrot(tut):
 parrot(palate_click):
 	#click with your tongue at the top of your mouth
 	print("palate_click")
-	#mouse_click(1)
+	mouse_click(1)
 
 parrot(pop):
 	# mouse_click(0)
     # close the mouse grid if open
-    user.grid_close()
-    # End any open drags
-    # Touch automatically ends left drags so this is for right drags specifically
-    user.mouse_drag_end()
 	print("pop")
 
 parrot(gluck):
@@ -58,6 +54,8 @@ parrot(hurr):
 	print("hurr")
 
 parrot(hmm):
+	#user.mouse_drag_end()
+	#user.mouse_drag(1)
 	print("hmm")
 
 parrot(oo):
