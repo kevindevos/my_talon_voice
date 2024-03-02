@@ -26,4 +26,5 @@ rm -r "${TALON_DIR}/community/settings"
 cp -r "${MY_TALON}/settings" "${TALON_DIR}/community"
 
 # Copy extra files and scripts
+rm -r "${TALON_DIR}/community/custom"
 cp -r "${MY_TALON}/custom" "${TALON_DIR}/community"
