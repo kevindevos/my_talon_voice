@@ -69,6 +69,24 @@ index 594fc6f..ea3bbfe 100644
      "page down": "pagedown",
  }
  # mac apparently doesn't have the menu key.
+diff --git a/core/modes/sleep_mode.talon b/core/modes/sleep_mode.talon
+index 4a0d9c1..385049c 100644
+--- a/core/modes/sleep_mode.talon
++++ b/core/modes/sleep_mode.talon
+@@ -30,9 +30,9 @@ settings():
+ # means that these won't recognize. The (+) handles this case, so if you say
+ # <pause> "talon wake talon wake" <pause>, it'll still work.
+ 
+-^(welcome back)+$:
+-    user.mouse_wake()
+-    user.history_enable()
+-    user.talon_mode()
++# ^(welcome back)+$:
++#    user.mouse_wake()
++#    user.history_enable()
++#    user.talon_mode()
+ 
+ ^(talon wake)+$: speech.enable()
 diff --git a/core/noise.py b/core/noise.py
 index 80c61ea..8479e2b 100644
 --- a/core/noise.py
