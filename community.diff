@@ -1,5 +1,5 @@
 diff --git a/apps/vscode/vscode.talon b/apps/vscode/vscode.talon
-index 877f5fc..9928645 100644
+index 877f5fc..1e8a503 100644
 --- a/apps/vscode/vscode.talon
 +++ b/apps/vscode/vscode.talon
 @@ -35,6 +35,12 @@ symbol hunt all [<user.text>]:
@@ -15,7 +15,18 @@ index 877f5fc..9928645 100644
  # Panels
  panel control: user.vscode("workbench.panel.repl.view.focus")
  panel output: user.vscode("workbench.panel.output.focus")
-@@ -95,6 +101,17 @@ file delete:
+@@ -74,6 +80,10 @@ file hunt (pace | paste):
+     user.vscode("workbench.action.quickOpen")
+     sleep(50ms)
+     edit.paste()
++items [<user.text>]:
++    user.vscode("workbench.action.quickOpen")
++    sleep(50ms)
++    insert(text or "")
+ file copy name: user.vscode("fileutils.copyFileName")
+ file copy path: user.vscode("copyFilePath")
+ file copy local [path]: user.vscode("copyRelativeFilePath")
+@@ -95,6 +105,17 @@ file delete:
      sleep(150ms)
  file open folder: user.vscode("revealFileInOS")
  file reveal: user.vscode("workbench.files.action.showActiveFileInExplorer")
