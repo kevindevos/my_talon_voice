@@ -1,5 +1,5 @@
 diff --git a/apps/vscode/vscode.talon b/apps/vscode/vscode.talon
-index 877f5fc..a50f67c 100644
+index 877f5fc..4f574d0 100644
 --- a/apps/vscode/vscode.talon
 +++ b/apps/vscode/vscode.talon
 @@ -35,6 +35,12 @@ symbol hunt all [<user.text>]:
@@ -15,15 +15,6 @@ index 877f5fc..a50f67c 100644
  # Panels
  panel control: user.vscode("workbench.panel.repl.view.focus")
  panel output: user.vscode("workbench.panel.output.focus")
-@@ -111,7 +117,7 @@ format selection: user.vscode("editor.action.formatSelection")
- imports fix: user.vscode("editor.action.organizeImports")
- problem next: user.vscode("editor.action.marker.nextInFiles")
- problem last: user.vscode("editor.action.marker.prevInFiles")
--problem fix: user.vscode("problems.action.showQuickFixes")
-+problem fix: user.vscode("problems.action.showQuickFixes")^
- rename that: user.vscode("editor.action.rename")
- refactor that: user.vscode("editor.action.refactor")
- whitespace trim: user.vscode("editor.action.trimTrailingWhitespace")
 diff --git a/core/edit/edit.talon b/core/edit/edit.talon
 index 052e915..aea10f3 100644
 --- a/core/edit/edit.talon
@@ -92,21 +83,15 @@ index 80c61ea..8479e2b 100644
          cron.cancel(hiss_cron)
          actions.user.noise_trigger_hiss(active)
 diff --git a/core/windows_and_tabs/window_management.talon b/core/windows_and_tabs/window_management.talon
-index 393cebe..0d9e1c8 100644
+index 393cebe..3b0876f 100644
 --- a/core/windows_and_tabs/window_management.talon
 +++ b/core/windows_and_tabs/window_management.talon
-@@ -18,3 +18,11 @@ snap <user.running_applications> <user.window_snap_position>:
+@@ -17,4 +17,4 @@ snap screen <number>: user.move_window_to_screen(number)
+ snap <user.running_applications> <user.window_snap_position>:
      user.snap_app(running_applications, window_snap_position)
  snap <user.running_applications> [screen] <number>:
-     user.move_app_to_screen(running_applications, number)
-+weber [<phrase>]$:
-+    user.switcher_focus("Chrome")
-+    sleep(200ms)
-+    user.parse_phrase(phrase or "")
-+coder [<phrase>]$:
-+    user.switcher_focus("Code")
-+    sleep(300ms)
-+    user.parse_phrase(phrase or "")
+-    user.move_app_to_screen(running_applications, number)
++    user.move_app_to_screen(running_applications, number)
 \ No newline at end of file
 diff --git a/lang/javascript/javascript.talon b/lang/javascript/javascript.talon
 index c05b609..97537f9 100644

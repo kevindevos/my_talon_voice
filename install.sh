@@ -1,4 +1,4 @@
-#TALON_COMMUNITY_DIR/bin/bash
+#!/bin/bash
 TALON_DIR="/Users/kevinlark/.talon/user"
 MY_TALON="/Users/kevinlark/Documents/my_talon"
 
