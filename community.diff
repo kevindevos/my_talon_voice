@@ -151,16 +151,3 @@ index c05b609..97537f9 100644
 -from import: user.insert_between(' from  "', '"')
 +from import: user.insert_between(' from  "', '"')
 \ No newline at end of file
-diff --git a/settings.talon b/settings.talon
-index cca9b5f..7a75df3 100644
---- a/settings.talon
-+++ b/settings.talon
-@@ -24,7 +24,7 @@ settings():
-     user.mouse_enable_pop_click = 1
- 
-     # Enable if you like to use the hissing noise to do mouse scroll
--    user.mouse_enable_hiss_scroll = 0
-+    user.mouse_enable_hiss_scroll = 1
- 
-     # When enabled, the 'Scroll Mouse' GUI will not be shown.
-     user.mouse_hide_mouse_gui = 0

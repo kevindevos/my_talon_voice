@@ -1,9 +1,22 @@
 parrot(cluck):
-	# Double Click 
-	print("cluck")
-	mouse_click(0)
-	mouse_click(0)
+	core.repeat_command(1)
 
+parrot(hiss):
+	print("hiss")
+	user.mouse_scroll_down(0.11)
+	sleep(0.02)
+    user.mouse_scroll_down(0.11)
+	sleep(0.02)
+	user.mouse_scroll_down(0.11)
+
+parrot(shush):
+	print("shush")
+    user.mouse_scroll_up(0.11)
+	sleep(0.02)
+    user.mouse_scroll_up(0.11)
+	sleep(0.02)
+	user.mouse_scroll_up(0.11)
+	
 parrot(tut):
 	print("tut")
 
@@ -78,12 +91,6 @@ parrot(buzz):
 
 parrot(generator):
 	print("generator")
-
-parrot(hiss):
-	print("hiss")
-
-parrot(shush):
-	print("shush")
 
 parrot(x):
 	print("x")

@@ -1,5 +1,6 @@
 #!/bin/bash
 TALON_DIR="/Users/kevinlark/.talon/user"
+TALON_ROOT_DIR="/Users/kevinlark/.talon/"
 MY_TALON="/Users/kevinlark/Documents/my_talon"
 
 # Update diff patches

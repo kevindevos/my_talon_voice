@@ -64,28 +64,22 @@
 	"hiss": {
 		"sounds": ["sibilant_s"],
 		"threshold": {
-			">power": 13,
-			">probability": 0.9
+			">power": 25,
+			">probability": 0.95
 		},
-		"graceperiod": 0.1,
-		"grace_threshold": {
-			">power": 5,
-			">probability": 0.6
+		"throttle": {
+			"hiss": 0.01
 		}
 	},
 	"shush": {
 		"sounds": ["sibilant_sh"],
 		"threshold": {
-			">power": 10,
-			">probability": 0.9
-		},
-		"graceperiod": 0.1,		
-		"grace_threshold": {
-			">power": 5,
-			">probability": 0.4
+			">power": 25,
+			">probability": 0.95
 		},
 		"throttle": {
-			"ch": 0.2
+			"ch": 0.2,
+			"shush": 0.01
 		}
 	}
 }
