@@ -1,5 +1,6 @@
 #!/bin/bash
 TALON_DIR="/Users/kevinlark/.talon/user"
+TALON_ROOT_DIR="/Users/kevinlark/.talon/"
 MY_TALON="/Users/kevinlark/Documents/my_talon"
 
 # Install community changes, (includes my settings.talon file)
@@ -20,6 +21,7 @@ git apply "${MY_TALON}/rango.diff"
 # Copy parrot files
 cp "${MY_TALON}/parrot_integration.py" "${TALON_DIR}"
 cp "${MY_TALON}/parrot.talon" "${TALON_DIR}"
+cp "${MY_TALON}/patterns.json" "${TALON_ROOT_DIR}/parrot"
 
 # Copy alphabet and other files
 rm -r "${TALON_DIR}/community/settings"

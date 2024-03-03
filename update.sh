@@ -15,4 +15,4 @@ git diff > "${MY_TALON}/rango.diff"
 # Copy parrot files
 cp "${TALON_DIR}/parrot_integration.py" "${MY_TALON}"
 cp "${TALON_DIR}/parrot.talon" "${MY_TALON}"
-
+cp "${TALON_ROOT_DIR}/parrot/patterns.json" "${MY_TALON}"
