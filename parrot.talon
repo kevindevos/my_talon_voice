@@ -2,9 +2,9 @@ parrot(cluck):
 	core.repeat_command(1)
 
 parrot(buzz):
-	mode.disable("command")
-	mode.enable("dictation")
-	mode.enable("user.dutch")
+	#mode.disable("command")
+	#mode.enable("dictation")
+	#mode.enable("user.dutch")
 
 parrot(hiss):
 	print("hiss")
