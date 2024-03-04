@@ -53,7 +53,7 @@
 		"sounds": ["sibilant_z", "fricative_v"],
 		"threshold": {
 			">power": 20,
-			">probability": 0.9
+			">probability": 0.99
 		},
 		"graceperiod": 0.1,
 		"grace_threshold": {
@@ -77,7 +77,7 @@
 	"shush": {
 		"sounds": ["sibilant_sh"],
 		"threshold": {
-			">power": 31,
+			">power": 35,
 			">probability": 0.995
 		},
 		"throttle": {

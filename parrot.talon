@@ -1,10 +1,12 @@
+mode: command
+
 parrot(cluck):
 	core.repeat_command(1)
 
 parrot(buzz):
-	#mode.disable("command")
-	#mode.enable("dictation")
-	#mode.enable("user.dutch")
+	# to exits out of the mac voice to speech
+    speech.enable()
+    key("escape")
 
 parrot(hiss):
 	print("hiss")

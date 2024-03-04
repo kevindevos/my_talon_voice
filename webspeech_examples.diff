@@ -16,16 +16,3 @@ index 055db98..85c404a 100644
  mod.mode("spanish")
  mod.mode("swedish")
 +mod.mode("dutch")
-diff --git a/languages.talon b/languages.talon
-index 0ab6aa4..f8cf522 100644
---- a/languages.talon
-+++ b/languages.talon
-@@ -27,3 +27,8 @@ swedish mode:
-     mode.disable("command")
-     mode.enable("dictation")
-     mode.enable("user.swedish")
-+
-+dutch mode:
-+    mode.disable("command")
-+    mode.enable("dictation")
-+    mode.enable("user.dutch")
