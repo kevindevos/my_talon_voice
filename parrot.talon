@@ -1,5 +1,3 @@
-mode: command
-
 parrot(cluck):
 	core.repeat_command(1)
 
@@ -7,6 +5,7 @@ parrot(buzz):
 	# to exits out of the mac voice to speech
     speech.enable()
     key("escape")
+
 
 parrot(hiss):
 	print("hiss")

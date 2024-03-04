@@ -99,10 +99,10 @@ index 594fc6f..ea3bbfe 100644
  }
  # mac apparently doesn't have the menu key.
 diff --git a/core/modes/sleep_mode.talon b/core/modes/sleep_mode.talon
-index 4a0d9c1..385049c 100644
+index 4a0d9c1..f7ff3ce 100644
 --- a/core/modes/sleep_mode.talon
 +++ b/core/modes/sleep_mode.talon
-@@ -30,9 +30,9 @@ settings():
+@@ -30,9 +30,10 @@ settings():
  # means that these won't recognize. The (+) handles this case, so if you say
  # <pause> "talon wake talon wake" <pause>, it'll still work.
  
@@ -115,7 +115,20 @@ index 4a0d9c1..385049c 100644
 +#    user.history_enable()
 +#    user.talon_mode()
  
- ^(talon wake)+$: speech.enable()
+-^(talon wake)+$: speech.enable()
++^(talon wake)+$: 
++    speech.enable()
+diff --git a/core/modes/to_sleep_mode.talon b/core/modes/to_sleep_mode.talon
+index 8fbfcf4..4d6b11e 100644
+--- a/core/modes/to_sleep_mode.talon
++++ b/core/modes/to_sleep_mode.talon
+@@ -23,4 +23,5 @@ mode: dictation
+     speech.disable()
+     user.engine_sleep()
+ 
+-^talon sleep [<phrase>]$: speech.disable()
++^talon sleep [<phrase>]$: 
++    speech.disable()
 diff --git a/core/noise.py b/core/noise.py
 index 80c61ea..b899bae 100644
 --- a/core/noise.py
@@ -151,3 +164,16 @@ index c05b609..97537f9 100644
 -from import: user.insert_between(' from  "', '"')
 +from import: user.insert_between(' from  "', '"')
 \ No newline at end of file
+diff --git a/settings.talon b/settings.talon
+index cca9b5f..f55afa3 100644
+--- a/settings.talon
++++ b/settings.talon
+@@ -21,7 +21,7 @@ settings():
+     # 0 = off
+     # 1 = on with eyetracker but not zoom mouse mode
+     # 2 = on but not with zoom mouse mode
+-    user.mouse_enable_pop_click = 1
++    user.mouse_enable_pop_click = 2
+ 
+     # Enable if you like to use the hissing noise to do mouse scroll
+     user.mouse_enable_hiss_scroll = 0
