@@ -1,6 +1,11 @@
 parrot(cluck):
 	core.repeat_command(1)
 
+parrot(buzz):
+	mode.disable("command")
+	mode.enable("dictation")
+	mode.enable("user.dutch")
+
 parrot(hiss):
 	print("hiss")
 	user.mouse_scroll_down(0.11)
@@ -60,7 +65,7 @@ parrot(horse):
 parrot(whistle):
 	print("whistle")
 
-parrot(chopper):
+parrot():
 	print("chopper")
 
 parrot(hurr):
@@ -85,9 +90,6 @@ parrot(uh):
 
 parrot(fff):
 	print("fff")
-
-parrot(buzz):
-	print("buzz")
 
 parrot(generator):
 	print("generator")

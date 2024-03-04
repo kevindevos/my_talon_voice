@@ -59,13 +59,16 @@
 		"grace_threshold": {
 			">power": 10,
 			">probability": 0.7
+		},
+		"throttle": {
+			"buzz": 0.75
 		}
 	},
 	"hiss": {
 		"sounds": ["sibilant_s"],
 		"threshold": {
-			">power": 20,
-			">probability": 0.95
+			">power": 52,
+			">probability": 0.9825
 		},
 		"throttle": {
 			"hiss": 0.01
@@ -74,8 +77,8 @@
 	"shush": {
 		"sounds": ["sibilant_sh"],
 		"threshold": {
-			">power": 10,
-			">probability": 0.95
+			">power": 31,
+			">probability": 0.995
 		},
 		"throttle": {
 			"ch": 0.2,
