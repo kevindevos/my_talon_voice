@@ -1,10 +1,12 @@
 parrot(cluck):
-	core.repeat_command(1)
+	#core.repeat_command(1)
 
 parrot(buzz):
 	# to exits out of the mac voice to speech
-    speech.enable()
-    key("escape")
+	# triggers easily during speech !! problem
+    print("buzz")
+#	speech.enable()
+ #   key("escape")
 
 
 parrot(hiss):
@@ -32,7 +34,7 @@ parrot(palate_click):
 	mouse_click(1)
 
 parrot(pop):
-	# mouse_click(0)
+	#mouse_click(0)
     # close the mouse grid if open
 	print("pop")
 

@@ -1,5 +1,5 @@
 diff --git a/apps/vscode/vscode.talon b/apps/vscode/vscode.talon
-index 877f5fc..1e8a503 100644
+index 877f5fc..95447e0 100644
 --- a/apps/vscode/vscode.talon
 +++ b/apps/vscode/vscode.talon
 @@ -35,6 +35,12 @@ symbol hunt all [<user.text>]:
@@ -44,8 +44,28 @@ index 877f5fc..1e8a503 100644
  save ugly: user.vscode("workbench.action.files.saveWithoutFormatting")
  
  # Language Features
+@@ -243,6 +264,10 @@ terminal scroll up: user.vscode("workbench.action.terminal.scrollUp")
+ terminal scroll down: user.vscode("workbench.action.terminal.scrollDown")
+ terminal <number_small>: user.vscode_terminal(number_small)
+ 
++# Custom Terminal commands
++term lisa: insert("ls")
++term katie: insert("cd")
++
+ #TODO: should this be added to linecommands?
+ copy line down: user.vscode("editor.action.copyLinesDownAction")
+ copy line up: user.vscode("editor.action.copyLinesUpAction")
+@@ -283,3 +308,7 @@ cell run: user.vscode("notebook.cell.execute")
+ 
+ install local: user.vscode("workbench.extensions.action.installVSIX")
+ preview markdown: user.vscode("markdown.showPreview")
++
++
++# Translation extension
++translate this: user.vscode("extension.translateTextPreferred")
+\ No newline at end of file
 diff --git a/core/edit/edit.talon b/core/edit/edit.talon
-index 052e915..aea10f3 100644
+index 052e915..2502c6b 100644
 --- a/core/edit/edit.talon
 +++ b/core/edit/edit.talon
 @@ -31,6 +31,11 @@ go way right: edit.line_end()
@@ -69,15 +89,28 @@ index 052e915..aea10f3 100644
  (pad | padding): user.insert_between(" ", " ")
  (pad | padding) <user.symbol_key>+:
      insert(" ")
-@@ -179,7 +184,7 @@ new line below | slap: edit.line_insert_down()
+@@ -179,7 +184,8 @@ new line below | slap: edit.line_insert_down()
      insert(" ")
  
  # Undo/redo
 -undo that: edit.undo()
-+nope: edit.undo()
++#nope: edit.undo()
++nope: key("cmd-z")
  redo that: edit.redo()
  
  # Save
+diff --git a/core/file_extension/file_extension.py b/core/file_extension/file_extension.py
+index 04a1c23..fe55b22 100644
+--- a/core/file_extension/file_extension.py
++++ b/core/file_extension/file_extension.py
+@@ -14,6 +14,7 @@ _file_extensions_defaults = {
+     "dot see": ".c",
+     "dot see sharp": ".cs",
+     "dot com": ".com",
++    "dot N L": ".nl",
+     "dot net": ".net",
+     "dot org": ".org",
+     "dot us": ".us",
 diff --git a/core/keys/keys.py b/core/keys/keys.py
 index 594fc6f..ea3bbfe 100644
 --- a/core/keys/keys.py

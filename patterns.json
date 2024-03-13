@@ -27,7 +27,7 @@
 		"sounds": ["sound_pop"],
 		"threshold": {
 			">power": 20,
-			">probability": 0.98
+			">probability": 0.999
 		},
 		"throttle": {
 			"pop": 0.15,
@@ -53,7 +53,7 @@
 		"sounds": ["sibilant_z", "fricative_v"],
 		"threshold": {
 			">power": 20,
-			">probability": 0.99
+			">probability": 0.9995
 		},
 		"graceperiod": 0.1,
 		"grace_threshold": {
@@ -67,8 +67,8 @@
 	"hiss": {
 		"sounds": ["sibilant_s"],
 		"threshold": {
-			">power": 52,
-			">probability": 0.9825
+			">power": 60,
+			">probability": 0.995
 		},
 		"throttle": {
 			"hiss": 0.01
@@ -77,7 +77,7 @@
 	"shush": {
 		"sounds": ["sibilant_sh"],
 		"threshold": {
-			">power": 35,
+			">power": 60,
 			">probability": 0.995
 		},
 		"throttle": {
