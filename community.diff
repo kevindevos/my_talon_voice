@@ -1,3 +1,16 @@
+diff --git a/.gitignore b/.gitignore
+index aefde33..34ba657 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -3,6 +3,5 @@ __pycache__
+ *.sw?
+ .idea/
+ # Locally generated
+-/settings
+ .vscode/settings.json
+-.DS_Store
++.DS_Store
+\ No newline at end of file
 diff --git a/apps/vscode/vscode.talon b/apps/vscode/vscode.talon
 index 877f5fc..95447e0 100644
 --- a/apps/vscode/vscode.talon

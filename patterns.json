@@ -58,7 +58,7 @@
 		"graceperiod": 0.1,
 		"grace_threshold": {
 			">power": 10,
-			">probability": 0.7
+				">probability": 0.7
 		},
 		"throttle": {
 			"buzz": 0.75
