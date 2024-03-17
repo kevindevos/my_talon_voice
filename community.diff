@@ -12,7 +12,7 @@ index aefde33..34ba657 100644
 +.DS_Store
 \ No newline at end of file
 diff --git a/apps/vscode/vscode.talon b/apps/vscode/vscode.talon
-index 877f5fc..95447e0 100644
+index 877f5fc..397a1f6 100644
 --- a/apps/vscode/vscode.talon
 +++ b/apps/vscode/vscode.talon
 @@ -35,6 +35,12 @@ symbol hunt all [<user.text>]:
@@ -68,11 +68,10 @@ index 877f5fc..95447e0 100644
  #TODO: should this be added to linecommands?
  copy line down: user.vscode("editor.action.copyLinesDownAction")
  copy line up: user.vscode("editor.action.copyLinesUpAction")
-@@ -283,3 +308,7 @@ cell run: user.vscode("notebook.cell.execute")
+@@ -283,3 +308,6 @@ cell run: user.vscode("notebook.cell.execute")
  
  install local: user.vscode("workbench.extensions.action.installVSIX")
  preview markdown: user.vscode("markdown.showPreview")
-+
 +
 +# Translation extension
 +translate this: user.vscode("extension.translateTextPreferred")

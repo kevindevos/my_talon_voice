@@ -1,5 +1,6 @@
 parrot(cluck):
 	#core.repeat_command(1)
+	edit.undo()
 
 parrot(buzz):
 	# to exits out of the mac voice to speech
@@ -11,19 +12,19 @@ parrot(buzz):
 
 parrot(hiss):
 	print("hiss")
-	user.mouse_scroll_down(0.11)
+	user.mouse_scroll_down(0.06)
 	sleep(0.02)
-    user.mouse_scroll_down(0.11)
+    user.mouse_scroll_down(0.06)
 	sleep(0.02)
-	user.mouse_scroll_down(0.11)
+	user.mouse_scroll_down(0.06)
 
 parrot(shush):
 	print("shush")
-    user.mouse_scroll_up(0.11)
+    user.mouse_scroll_up(0.06)
 	sleep(0.02)
-    user.mouse_scroll_up(0.11)
+    user.mouse_scroll_up(0.06)
 	sleep(0.02)
-	user.mouse_scroll_up(0.11)
+	user.mouse_scroll_up(0.06)
 	
 parrot(tut):
 	print("tut")
