@@ -17,3 +17,11 @@ git diff > "${MY_TALON}/rango.diff"
 cp "${TALON_DIR}/parrot_integration.py" "${MY_TALON}"
 cp "${TALON_DIR}/parrot.talon" "${MY_TALON}"
 cp "${TALON_ROOT_DIR}/parrot/patterns.json" "${MY_TALON}"
+
+# Copy alphabet and other files
+rm -r "${MY_TALON}/settings"
+cp -r "${TALON_DIR}/community/settings" "${MY_TALON}"
+
+# Copy custom folder
+rm -r "${MY_TALON}/custom"
+cp -r "${TALON_DIR}/community/custom" "${MY_TALON}"
